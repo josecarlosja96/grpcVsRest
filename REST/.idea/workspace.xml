@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db74b4e5-577a-459c-9abe-a31c0c858e00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../graphql/locustfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../graphqlExample/locustfile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../graphql/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/../graphqlExample/models.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../graphql/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../graphqlExample/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../graphql/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../graphqlExample/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/PythonServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../thrift/py/gen-py/PythonServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/shared/SharedService-remote" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/shared/SharedService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/shared/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/shared/constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/shared/ttypes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/tutorial/Calculator-remote" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/tutorial/Calculator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/tutorial/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/tutorial/constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thrift/py/gen-py/tutorial/ttypes.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../graphql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">

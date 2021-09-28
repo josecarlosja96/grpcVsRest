@@ -17,14 +17,10 @@ import gevent
 from tutorial import Calculator
 from tutorial.ttypes import InvalidOperation, Operation, Work
 
-
 # Libs
 from locust.contrib.fasthttp import FastHttpUser
 from locust import task, events, constant
 from locust.runners import STATE_STOPPING, STATE_STOPPED, STATE_CLEANUP, WorkerRunner
-
-
-__author__ = 'Manoj Singh'
 
 def stopwatch(func):
     """To be updated"""
@@ -57,6 +53,7 @@ def stopwatch(func):
     return wrapper
 
 class GRPCMyLocust(FastHttpUser):
+
     host = 'http://127.0.0.1:9090'
     wait_time = constant(0)
 
@@ -73,48 +70,22 @@ class GRPCMyLocust(FastHttpUser):
     def grpc_client_task(self):
         """To be updated"""
         try:
-            with TSocket.TSocket('localhost', 9090) as channel:
-                transport = TTransport.TBufferedTransport(channel)
+            transport = TSocket.TSocket('localhost', 9090)
 
-                # Wrap in a protocol
-                protocol = TBinaryProtocol.TBinaryProtocol(transport)
+            transport = TTransport.TBufferedTransport(transport)
 
-                # Create a client to use the protocol encoder
-                client = Calculator.Client(protocol)
+            # Wrap in a protocol
+            protocol = TBinaryProtocol.TBinaryProtocol(transport)
 
-                # Connect!
-                transport.open()
-                client.ping()
-                print('ping()')
+            # Create a client to use the protocol encoder
+            client = Calculator.Client(protocol)
 
-                sum_ = client.add(1, 1)
-                print('1+1=%d' % sum_)
+            # Connect!
+            transport.open()
+            client.zip()
 
-                work = Work()
-
-                work.op = Operation.DIVIDE
-                work.num1 = 1
-                work.num2 = 0
-
-                try:
-                    quotient = client.calculate(1, work)
-                    print('Whoa? You know how to divide by zero?')
-                    print('FYI the answer is %d' % quotient)
-                except InvalidOperation as e:
-                    print('InvalidOperation: %r' % e)
-
-                work.op = Operation.SUBTRACT
-                work.num1 = 15
-                work.num2 = 10
-
-                diff = client.calculate(1, work)
-                print('15-10=%d' % diff)
-
-                log = client.getStruct(1)
-                print('Check log: %s' % log.value)
-
-                # Close!
-                transport.close()
+            # Close!
+            transport.close()
 
         except (KeyboardInterrupt, SystemExit):
             sys.exit(0)

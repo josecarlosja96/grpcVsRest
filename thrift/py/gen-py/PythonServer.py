@@ -74,7 +74,14 @@ class CalculatorHandler:
         return self.log[key]
 
     def zip(self):
-        print('zip()')
+
+        from pymongo import MongoClient
+        client = MongoClient('172.17.0.2', 27017)
+        db = client.test
+        collection = db.gRPC
+        consulta = collection.find_one()
+        print(consulta)
+
 
 
 if __name__ == '__main__':
