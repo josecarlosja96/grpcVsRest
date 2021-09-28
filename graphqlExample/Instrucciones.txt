@@ -1,0 +1,7 @@
+npm init --yes
+npm install apollo-server graphql
+npm i mongoose
+npm install express express-graphql graphql --save
+
+-- Start Server
+node index.js
